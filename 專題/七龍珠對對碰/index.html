@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="shortcut icon" href="#">
+    <title>七龍珠對對碰</title>
+</head>
+
+<body>
+    <h2 class="page-title">七龍珠對對碰</h2>
+    <div class="overlay-text visible">
+        點擊後開始
+    </div>
+    <div id="game-over-text" class="overlay-text">
+        時間到!遊戲結束
+        <span class="overlay-text-small">點擊重新開始</span>
+    </div>
+    <div id="victory-text" class="overlay-text">
+        恭喜過關
+        <span class="overlay-text-small">點擊重新開始</span>
+    </div>
+    <div class="game-container">
+        <div class="game-info-container">
+            <div class="game-info">
+                時間: <span id="time-remaining">240</span>
+            </div>
+            <div class="game-info">
+                步數: <span id="flips">0</span>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+
+                <img class="cardimg" src="./IMG/悟空自在極易.jpg">
+            </div>
+            <div class="card-front card-face">
+
+                <img class="card-value card-GL" src="./IMG/吉連.jpg">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="cardimg" src="./IMG/悟空自在極易.jpg">
+            </div>
+            <div class="card-front card-face">
+
+                <img class="card-value card-GL" src="./IMG/吉連.jpg">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="cardimg" src="./IMG/悟空自在極易.jpg">
+            </div>
+            <div class="card-front card-face">
+
+                <img class="card-value card-st" src="./IMG/希特.jpg">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="cardimg" src="./IMG/悟空自在極易.jpg">
+            </div>
+            <div class="card-front card-face">
+
+                <img class="card-value card-st" src="./IMG/希特.jpg">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="cardimg" src="./IMG/悟空自在極易.jpg">
+            </div>
+            <div class="card-front card-face">
+
+                <img class="card-value card-turtle" src="./IMG/歸先人.jpg" >
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="cardimg" src="./IMG/悟空自在極易.jpg">
+            </div>
+            <div class="card-front card-face">
+
+                <img class="card-value card-turtle" src="./IMG/歸先人.jpg">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="cardimg" src="./IMG/悟空自在極易.jpg">
+            </div>
+            <div class="card-front card-face">
+
+                <img class="card-value card-bls" src="./IMG/比魯斯.jpg">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="cardimg" src="./IMG/悟空自在極易.jpg">
+            </div>
+            <div class="card-front card-face">
+
+                <img class="card-value card-bls" src="./IMG/比魯斯.jpg">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="cardimg" src="./IMG/悟空自在極易.jpg">
+            </div>
+            <div class="card-front card-face">
+
+                <img class="card-value card-mlc" src="./IMG/莫納卡.jpg">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="cardimg" src="./IMG/悟空自在極易.jpg">
+            </div>
+            <div class="card-front card-face">
+
+                <img class="card-value card-mlc" src="./IMG/莫納卡.jpg">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="cardimg" src="./IMG/悟空自在極易.jpg">
+            </div>
+            <div class="card-front card-face">
+
+                <img class="card-value card-bgt" src="./IMG/貝吉塔.jpg" >
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="cardimg" src="./IMG/悟空自在極易.jpg">
+            </div>
+            <div class="card-front card-face">
+
+                <img class="card-value card-bgt" src="./IMG/貝吉塔.jpg " >
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="cardimg" src="./IMG/悟空自在極易.jpg">
+            </div>
+            <div class="card-front card-face">
+
+                <img class="card-value" src="./IMG/超籃悟空.jpg">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="cardimg" src="./IMG/悟空自在極易.jpg">
+            </div>
+            <div class="card-front card-face">
+
+                <img class="card-value" src="./IMG/超籃悟空.jpg">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="cardimg" src="./IMG/悟空自在極易.jpg">
+            </div>
+            <div class="card-front card-face">
+
+                <img class="card-value card-king" src="./IMG/全王.jpg">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="cardimg" src="./IMG/悟空自在極易.jpg">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value card-king" src="./IMG/全王.jpg">
+            </div>
+        </div>
+    </div>
+
+    <script src="./js.js"></script>
+</body>
+
+</html>

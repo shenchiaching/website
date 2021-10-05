@@ -1,0 +1,579 @@
+/*=============== 谷歌文字連結 ===============*/
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@500;600;700&display=swap");
+/*=============== 變量 CSS ===============*/
+
+:root {
+    --header-height: 3rem;
+    /*========== 顏色 ==========*/
+    --hue-color: 190;
+    --pink: #ff4757;
+    /* HSL 顏色 */
+    --first-color: hsl(var(--hue-color), 64%, 22%);
+    --first-color-second: hsl(var(--hue-color), 64%, 22%);
+    --first-color-alt: hsl(var(--hue-color), 64%, 15%);
+    --title-color: hsl(var(--hue-color), 64%, 18%);
+    --text-color: hsl(var(--hue-color), 24%, 35%);
+    --text-color-light: hsl(var(--hue-color), 8%, 60%);
+    --input-color: hsl(var(--hue-color), 24%, 97%);
+    --body-color: hsl(var(--hue-color), 100%, 99%);
+    --white-color: #FFF;
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 75%);
+    /*========== 字大小和字形 ==========*/
+    --body-font: 'Open Sans', sans-serif;
+    --title-font: 'Raleway', sans-serif;
+    --biggest-font-size: 2.5rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+    /*========== 字寬 ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    /*========== margin bot ==========*/
+    --mb-0-25: .25rem;
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-25: 1.25rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    /*========== z index ==========*/
+    /* --z-tooltip: 10; */
+    --z-fixed: 100;
+}
+
+/* 在968螢幕下自動設定為以下大小 */
+
+@media screen and (min-width: 968px) {
+    :root {
+        --biggest-font-size: 4rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.75rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+    }
+}
+
+/*========== 夜間模式 ==========*/
+
+body.dark-theme {
+    --first-color-second: hsl(var(--hue-color), 54%, 12%);
+    --title-color: hsl(var(--hue-color), 24%, 95%);
+    --text-color: hsl(var(--hue-color), 8%, 75%);
+    --input-color: hsl(var(--hue-color), 29%, 16%);
+    --body-color: hsl(var(--hue-color), 29%, 12%);
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+}
+
+/*========== 模式按鈕 ==========*/
+
+.nav__dark {
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+    position: absolute;
+    left: 3rem;
+    bottom: 4rem;
+}
+
+.change-theme, .change-theme-name {
+    color: var(--text-color);
+}
+
+.change-theme {
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.change-theme-name {
+    font-size: var(--small-font-size);
+}
+
+/*=============== 基本設定 ===============*/
+
+*::selection {
+    background: var(--pink);
+    color: #fff;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    padding: 0 9%;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    font-size: 70%;
+}
+
+body {
+    margin: var(--header-height) 0 0 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+h1, h2, h3 {
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+    font-family: var(--title-font);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button, input {
+    border: none;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+
+button {
+    cursor: pointer;
+}
+
+input {
+    outline: none;
+}
+
+.main {
+    overflow-x: hidden;
+}
+
+/*=============== 重複使用的CSS ===============*/
+
+.section__title {
+    font-size: var(--h2-font-size);
+    color: var(--title-color);
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: var(--mb-2);
+}
+
+.container {
+    max-width: 968px;
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+/*=============== HEADER ===============*/
+
+.heading {
+    text-align: center;
+    padding: 1rem;
+    color: #fff;
+    font-size: 4rem;
+    -webkit-text-stroke: #666 .1rem;
+    text-shadow: 0 .3rem .5rem rgba(0, 0, 0, .1);
+    font-weight: bolder;
+    letter-spacing: .3rem;
+}
+
+.header {
+    transition: all .5s linear;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background: black;
+    padding: 1rem 9%;
+}
+
+header .scroll-bar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    height: .4rem;
+    background: var(--pink);
+    width: 0px;
+}
+
+.scroll-header {
+    background-color: var(--body-color);
+    box-shadow: 0 0 4px rgba(14, 55, 63, 0.15);
+}
+
+.scroll-header .navlogo, .scroll-header .nav__toggle {
+    color: var(--title-color);
+}
+
+/*=============== NAV ===============*/
+
+.nav {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+}
+
+.navlogo, .nav__toggle {
+    color: var(--white-color);
+}
+
+.nav__toggle {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.nav__menu {
+    position: relative;
+}
+
+@media screen and (max-width: 767px) {
+    .nav__menu {
+        position: fixed;
+        background-color: var(--body-color);
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100%;
+        box-shadow: -1px 0 4px rgba(14, 55, 63, 0.15);
+        padding: 3rem;
+        transition: .4s;
+    }
+}
+
+.nav__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.5rem;
+}
+
+.nav__link {
+    color: var(--text-color-light);
+    font-weight: var(--font-semi-bold);
+    text-transform: uppercase;
+}
+
+.nav__link:hover {
+    color: var(--text-color);
+}
+
+.nav__close {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: var(--title-color);
+    cursor: pointer;
+}
+
+/* show menu */
+
+.show-menu {
+    right: 0;
+}
+
+.show-menu li {
+    margin-top: 20px;
+}
+
+/* 改變HEADER顏色 */
+
+.scroll-header {
+    background-color: var(--body-color);
+    box-shadow: 0 0 4px rgba(14, 55, 63, 0.15);
+}
+
+.scroll-header .navlogo, .scroll-header .nav__toggle {
+    color: var(--title-color);
+}
+
+/*連結 */
+
+.active-link {
+    position: relative;
+    color: var(--title-color);
+}
+
+.active-link::before {
+    content: '';
+    position: absolute;
+    background-color: var(--title-color);
+    width: 100%;
+    height: 2px;
+    bottom: -.75rem;
+    left: 0;
+}
+
+/*========== 輪播 ==========*/
+
+.home {
+    background: #FC354C;
+    background: -webkit-linear-gradient(to right, #0ABFBC, #FC354C);
+    background: linear-gradient(to right, #0ABFBC, #FC354C);
+    margin-top: 25px;
+}
+
+.home .content {
+    padding-top: 5rem;
+    max-width: 70rem;
+    margin: 0 auto;
+}
+
+.home .content h3 {
+    font-size: 6.5rem;
+    color: #fff;
+}
+
+.home .content p {
+    font-size: 1.7rem;
+    color: #eee;
+    padding: 1rem 0;
+}
+
+.home .swiper-container {
+    width: 100%;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.home .swiper-slide {
+    width: 30rem;
+    height: 50rem;
+}
+
+.home .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/*========== 輪播 ==========*/
+
+/*========== about ==========*/
+
+.about {
+    margin-top: 100px;
+}
+
+.about .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.about .row .image {
+    text-align: center;
+    flex: 1 1 40rem;
+}
+
+.about .row .image img {
+    width: 50%;
+}
+
+.about .row .content {
+    flex: 1 1 40rem;
+}
+
+.about .row .content h3 {
+    color: var(--black);
+    font-size: 3.5rem;
+}
+
+.about .row .content p {
+    font-size: 1.7rem;
+    padding: 1rem 0;
+}
+
+.about .row .content .buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*========== about ==========*/
+
+.usage {
+    margin-top: 120px;
+}
+
+.usage .row1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.usage .row1 .divider {
+    padding: 0 1rem;
+}
+
+.usage .row1 .box-container .box {
+    padding: 1rem 0;
+}
+
+.usage .row1 .box-container .box i {
+    color: var(--red);
+    padding: 1rem 0;
+    font-size: 4.5rem;
+}
+
+.usage .row1 .box-container .box h3 {
+    color: var(--black);
+    font-size: 2.5rem;
+}
+
+.usage .row1 .box-container .box p {
+    padding: 1rem 0;
+    font-size: 1.5rem;
+}
+
+.usage .row1 .box-container:first-child {
+    text-align: right;
+}
+
+/*========== 輪播 ==========*/
+
+/*========== 底部 ==========*/
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer {
+    background-color: #24262b;
+    padding: 25px 0;
+    margin-top: 100px;
+}
+
+.footer i {
+    font-size: 16px;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: auto;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 72px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+/*========== 底部結束 ==========*/
+
+/*=============== SCROLL BAR ===============*/
+
+::-webkit-scrollbar {
+    width: .60rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--text-color-light);
+}
+
+/*========== 置頂 ==========*/
+
+.scrollup {
+    position: fixed;
+    right: 1rem;
+    bottom: -20%;
+    background-color: var(--first-color);
+    padding: .5rem;
+    display: flex;
+    opacity: .9;
+    z-index: var(--z-tooltip);
+    transition: .4s;
+}
+
+.scrollup:hover {
+    background-color: var(--first-color-alt);
+    opacity: 1;
+}
+
+.scrollup__icon {
+    color: var(--white-color);
+    font-size: 1.2rem;
+}
+
+/* Show scroll */
+
+.show-scroll {
+    bottom: 5rem;
+}
+
+/*========== 置頂結束 ==========*/

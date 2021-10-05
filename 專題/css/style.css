@@ -1,0 +1,818 @@
+/*=============== 谷歌文字連結 ===============*/
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@500;600;700&display=swap");
+/*=============== 變量 CSS ===============*/
+
+:root {
+    --header-height: 3rem;
+    /*========== 顏色 ==========*/
+    --hue-color: 190;
+    --pink: #ff4757;
+    /* HSL 顏色 */
+    --first-color: hsl(var(--hue-color), 64%, 22%);
+    --first-color-second: hsl(var(--hue-color), 64%, 22%);
+    --first-color-alt: hsl(var(--hue-color), 64%, 15%);
+    --title-color: hsl(var(--hue-color), 64%, 18%);
+    --text-color: hsl(var(--hue-color), 24%, 35%);
+    --text-color-light: hsl(var(--hue-color), 8%, 60%);
+    --input-color: hsl(var(--hue-color), 24%, 97%);
+    --body-color: hsl(var(--hue-color), 100%, 99%);
+    --white-color: #FFF;
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 75%);
+    /*========== 字大小和字形 ==========*/
+    --body-font: 'Open Sans', sans-serif;
+    --title-font: 'Raleway', sans-serif;
+    --biggest-font-size: 2.5rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+    /*========== 字寬 ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    /*========== margin bot ==========*/
+    --mb-0-25: .25rem;
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-25: 1.25rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    /*========== z index ==========*/
+    /* --z-tooltip: 10; */
+    --z-fixed: 100;
+}
+
+/* 在968螢幕下自動設定為以下大小 */
+
+@media screen and (min-width: 968px) {
+    :root {
+        --biggest-font-size: 4rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.75rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+    }
+}
+
+/*========== Variables Dark theme ==========*/
+
+body.dark-theme {
+    --first-color-second: hsl(var(--hue-color), 54%, 12%);
+    --title-color: hsl(var(--hue-color), 24%, 95%);
+    --text-color: hsl(var(--hue-color), 8%, 75%);
+    --input-color: hsl(var(--hue-color), 29%, 16%);
+    --body-color: hsl(var(--hue-color), 29%, 12%);
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+}
+
+/*========== Button Dark/Light ==========*/
+
+.nav__dark {
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+    position: absolute;
+    left: 3rem;
+    bottom: 4rem;
+}
+
+.change-theme, .change-theme-name {
+    color: var(--text-color);
+}
+
+.change-theme {
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.change-theme-name {
+    font-size: var(--small-font-size);
+}
+
+/*=============== BASE ===============*/
+
+*::selection {
+    background: var(--pink);
+    color: #fff;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    padding: 0 9%;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    margin: var(--header-height) 0 0 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+h1, h2, h3 {
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+    font-family: var(--title-font);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button, input {
+    border: none;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+
+button {
+    cursor: pointer;
+}
+
+input {
+    outline: none;
+}
+
+.main {
+    overflow-x: hidden;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+
+.section__title {
+    font-size: var(--h2-font-size);
+    color: var(--title-color);
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: var(--mb-2);
+}
+
+.container {
+    max-width: 968px;
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+/*=============== HEADER ===============*/
+
+.heading {
+    margin-top: 100px;
+    text-align: center;
+    padding: 1rem;
+    color: #fff;
+    font-size: 4rem;
+    -webkit-text-stroke: #666 .1rem;
+    text-shadow: 0 .3rem .5rem rgba(0, 0, 0, .1);
+    font-weight: bolder;
+    letter-spacing: .3rem;
+}
+
+.header {
+    transition: all .5s linear;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background: black;
+    padding: 0rem 9%;
+    background-color: transparent;
+}
+
+header .scroll-bar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    height: .4rem;
+    background: var(--pink);
+    width: 0px;
+}
+
+/* .scroll-header {
+    background-color: var(--body-color);
+    box-shadow: 0 0 4px rgba(14, 55, 63, 0.15);
+}
+
+.scroll-header .nav__logo, .scroll-header .nav__toggle {
+    color: var(--title-color);
+} */
+
+/*=============== NAV ===============*/
+
+.nav {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+}
+
+.navlogo, .nav__toggle {
+    color: var(--white-color);
+}
+
+.nav__toggle {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.nav__menu {
+    position: relative;
+}
+
+@media screen and (max-width: 767px) {
+    .nav__menu {
+        position: fixed;
+        background-color: var(--body-color);
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100%;
+        box-shadow: -1px 0 4px rgba(14, 55, 63, 0.15);
+        padding: 3rem;
+        transition: .4s;
+    }
+}
+
+.nav__list {
+    
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.5rem;
+}
+
+.nav__link {
+    color: var(--text-color-light);
+    font-weight: var(--font-semi-bold);
+    text-transform: uppercase;
+}
+
+.nav__link:hover {
+    color: var(--text-color);
+}
+
+.nav__close {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: var(--title-color);
+    cursor: pointer;
+}
+
+/* 漢堡選單 */
+
+.show-menu {
+    right: 0;
+}
+.show-menu li{
+    margin-top: 20px;
+}
+
+/* 改變滑動時的HEADER設定 */
+
+.scroll-header {
+    background-color: var(--body-color);
+    box-shadow: 0 0 4px rgba(14, 55, 63, 0.15);
+}
+
+.scroll-header .nav__toggle {
+    color: var(--title-color);
+}
+
+/* Active link */
+
+.active-link {
+    position: relative;
+    color: var(--title-color);
+}
+
+.active-link::before {
+    content: '';
+    position: absolute;
+    background-color: var(--title-color);
+    width: 100%;
+    height: 2px;
+    bottom: -.75rem;
+    left: 0;
+}
+
+/*=============== HOME ===============*/
+
+.home__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: 83%;
+}
+
+.home__container {
+    position: relative;
+    height: calc(100vh - var(--header-height));
+    align-content: center;
+    row-gap: 3rem;
+}
+
+.home__data-subtitle, .home__data-title {
+    color: var(--pink);
+}
+
+.home_sec-title {
+    color: white;
+}
+
+.home__data-title, .home_sec-title {
+    font-size: var(--biggest-font-size);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-1-5);
+}
+
+.home__social {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
+
+.home__social-link {
+    font-size: 2.2rem;
+    width: max-content;
+    color: var(--white-color);
+}
+
+/*=============== BUTTONS ===============*/
+
+.button {
+    display: inline-block;
+    border-radius: 5rem;
+    background: #444;
+    color: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+    padding: .7rem 3rem;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    font-size: 0.8rem;
+}
+
+/* 按鈕觸碰 */
+
+.button::before, .button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 0%;
+    background: var(--pink);
+    z-index: -1;
+    transition: .3s linear;
+}
+
+.button::before {
+    left: 0;
+}
+
+.button::after {
+    right: 0;
+}
+
+.button:hover::before, .button:hover::after {
+    width: 100%;
+}
+
+/*=============== ABOUT ===============*/
+
+.about {
+    margin-top: 100px;
+}
+
+.about .aboutrow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.about .aboutrow .title {
+    font-size: 3rem;
+    color: var(--pink);
+    padding: .5rem 100px;
+}
+
+.about .aboutrow .aboutimg img {
+    height: 450px;
+    width: 350px;
+    text-align: center;
+}
+
+.about .aboutrow .presonal-info {
+    flex: 1 1 55rem;
+    padding: 5rem;
+}
+
+.about .aboutrow .presonal-info .box-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about .aboutrow .presonal-info .box-container .box {
+    padding: 3rem;
+    margin: auto;
+}
+
+.about .aboutrow .presonal-info .box-container .box h3 {
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.about .aboutrow .presonal-info .box-container .box h3 span {
+    color: #999;
+    font-size: 1.7rem;
+}
+
+.about .workinfo {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about .workinfo .box {
+    margin: 1rem;
+    padding: 2rem;
+    border: .1rem solid;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    flex: 1 1 20rem;
+}
+
+.about .workinfo .box h3 {
+    font-size: 1.9rem;
+    color: var(--pink);
+}
+
+.about .workinfo .box p {
+    font-size: 1.5rem;
+    padding: .5rem 0;
+}
+
+/*========== about 結束 ==========*/
+
+/*========== SKILL 開始 ==========*/
+
+section .skills {
+    display: grid;
+    grid-gap: 36px;
+    padding: 16px;
+    /* max-width: 1024px; */
+    margin-inline: auto;
+}
+
+.skills .set {
+    /* background-color: cornsilk; */
+    padding: 50px;
+    border-radius: 16px;
+    box-shadow: black;
+    border: .1rem solid;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%);
+}
+
+.set span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    font-size: 48px;
+    background-color: var(--pink);
+    color: white;
+    border-radius: 35%;
+    margin-inline: auto;
+}
+
+.set>header {
+    padding-block: 24px;
+    font-size: 30px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.set .list {
+    padding-block: 8px;
+    display: grid;
+    grid-template-columns: 1fr 28px;
+    text-transform: uppercase;
+}
+
+section .skills .set .list i, label {
+    font-size: 22px;
+}
+
+.skills .fa-html5 {
+    color: darkorange;
+}
+
+.skills .fa-css3 {
+    color: steelblue;
+}
+
+.skills .fa-js {
+    color: goldenrod;
+}
+
+.skills .fa-php {
+    color: mediumpurple;
+}
+
+.skills .fa-bootstrap {
+    color: mediumslateblue;
+}
+
+.skills .fa-js-square {
+    color: royalblue;
+}
+
+.skills .fa-react {
+    color: skyblue;
+}
+
+.skills .fa-node-js {
+    color: green;
+}
+
+.skills .fa-database {
+    color: green;
+}
+
+.skills .fa-book {
+    color: darksalmon;
+}
+
+/*========== SKILL 結束 ==========*/
+
+/*========== 經驗開始 ==========*/
+
+.experience {
+    margin-top: 100px;
+}
+
+.experience .experiencerow {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.experience .experiencerow .column {
+    flex: 1 1 40rem;
+    margin: 1rem;
+    padding: 2rem;
+    border: .1rem solid;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+}
+
+.experience .experiencerow .column .title {
+    color: var(--pink);
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+}
+
+.experience .experiencerow .column .box {
+    padding-left: 2.5rem;
+    padding-bottom: 2rem;
+    border-left: .2rem solid var(--pink);
+    position: relative;
+}
+
+.experience .experiencerow .column .box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -1.1rem;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background: var(--pink);
+}
+
+.experience .experiencerow .column .box .year {
+    font-size: 1.5rem;
+    color: #999;
+    padding-bottom: .5rem;
+}
+
+.experience .experiencerow .column .box .year i {
+    padding-right: .5rem;
+}
+
+.experience .experiencerow .column .box h3 {
+    font-size: 2rem;
+}
+
+.experience .experiencerow .column .box p {
+    font-size: 1.5rem;
+    padding-top: .5rem;
+}
+
+/*========== 經驗結束 ==========*/
+
+/*========== 作品開始 ==========*/
+
+.portfolio {
+    margin-top: 100px;
+}
+
+.portfolio .box-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.portfolio .box-container .box {
+    margin: 1rem;
+    border: .1rem solid;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    text-align: center;
+    padding: 1rem;
+    flex: 1 1 30rem;
+    cursor: pointer;
+}
+
+.portfolio .box-container .box i {
+    color: var(--red);
+    font-size: 5rem;
+    padding: 1rem;
+}
+
+.portfolio .box-container .box h3 {
+    color: var(--black);
+    font-size: 2.4rem;
+}
+
+.portfolio .box-container .box p {
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.portfolio .morebutton {
+    padding: auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.portfolio .morebutton .button {
+    background-color: gray;
+}
+
+/*========== 作品結束 ==========*/
+
+/*========== 置頂 ==========*/
+
+.scrollup {
+    position: fixed;
+    right: 1rem;
+    bottom: -20%;
+    background-color: var(--first-color);
+    padding: .5rem;
+    display: flex;
+    opacity: .9;
+    transition: .4s;
+}
+
+.scrollup:hover {
+    background-color: var(--first-color-alt);
+    opacity: 1;
+}
+
+.scrollup__icon {
+    color: var(--white-color);
+    font-size: 1.2rem;
+}
+
+/* Show scroll */
+
+.show-scroll {
+    bottom: 5rem;
+}
+
+/*========== 置頂結束 ==========*/
+
+/*========== 底部 ==========*/
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer {
+    background-color: #24262b;
+    padding: 25px 0;
+    margin-top: 50px;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: auto;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 72px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+/*========== 底部結束 ==========*/
+
+/*=============== SCROLL BAR ===============*/
+
+::-webkit-scrollbar {
+    width: .60rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--text-color-light);
+}

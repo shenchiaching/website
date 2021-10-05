@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!--=============== 頁籤圖片 ===============-->
+    <link rel="shortcut icon" href="./image/頁籤.png" type="image/png">
+
+    <!--=============== swiper 輪播圖片 ===============-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!--=============== 連結圖示ICON REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!--=============== 連結圖示ICON font-awesome ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!--===============  CSS ===============-->
+    <link rel="stylesheet" href="./css/portfolio.css">
+
+    <!--=============== RWD CSS ===============-->
+    <link rel="stylesheet" href="./css/porRWD.css">
+
+    <!--=============== loading CSS ===============-->
+    <link rel="stylesheet" href="./css/loading.css">
+
+    <!--===============  JS JQ ===============-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!--=============== 輪播 JS ===============-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+
+    <!--=============== 網頁名稱 ===============-->
+    <title>家慶的個人網頁</title>
+
+</head>
+
+<body>
+
+
+    <div class="loading-wrapper">
+        <div class="loading sk-double-bounce">
+            <div class="sk-child sk-double-bounce1"></div>
+            <div class="sk-child sk-double-bounce2"></div>
+
+        </div>
+    </div>
+
+    <!--=============== header 開始 ===============-->
+    <header class="header" id="header">
+        <nav class="nav container">
+
+            <!--=============== 主頁LOGO連結  ===============-->
+
+            <a href="./index.html" class="navlogo"> <img class="logoimg" src="./image/logo.png" alt=""> </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">輪播</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">關於遊樂園</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#usage" class="nav__link">功能介紹</a>
+                    </li>
+
+                </ul>
+                <div class="nav__dark">
+                    <!-- Theme change button -->
+                    <span class="change-theme-name">暗色模式</span>
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
+                </div>
+
+                <i class="ri-close-line nav__close" id="nav-close"></i>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-function-line"></i>
+            </div>
+        </nav>
+
+
+        <div class="scroll-bar"></div>
+    </header>
+    <!--=============== header 結束 ===============-->
+
+    <!--=============== 輪播 結束 ===============-->
+
+    <section class="home" id="home">
+
+
+        <div class="swiper-container image-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./image/真好玩遊樂園2.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./image/商店.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./image/農場.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./image/遊樂園.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./image/更衣室.jpg" alt=""></div>
+            </div>
+        </div>
+
+    </section>
+    <!--=============== 輪播 結束 ===============-->
+
+
+    <!--==================== ABOUT ====================-->
+    <section class="about" id="about">
+
+        <h1 class="heading">關於遊樂園</h1>
+
+        <div class="row">
+
+            <div class="image">
+                <img src="./image/真好玩遊樂園2.jpg" alt="">
+            </div>
+
+            <div class="content">
+                <h3>真好玩遊樂園</h3>
+                <p>與全家合作開發的H5真好玩遊樂園，使用O2O的行銷方式，將趣味好玩的遊戲因子融入於全家會員的生活中，如會員喜愛的養成農場遊戲「Farm」牛吃草，透過種植咖啡豆來獲得咖啡、購物金等好禮，也提供多款簡單有趣的輕型態小遊戲，會員可累積彩票兌換Let's
+                    Café咖啡、茶葉蛋、小分子氣泡水等商品。主要是希望持續透過會員APP提供數位創新體驗，進而提升會員黏著度。</p>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--==================== ABOUT 結束====================-->
+
+
+    <!--==================== 功能介紹 開始====================-->
+    <section class="usage" id="usage">
+
+        <h1 class="heading">主要功能有哪些</h1>
+
+        <div class="row1">
+
+            <div class="box-container">
+                <div class="box">
+                    <img src="./image/遊樂園ICON.png" alt="">
+
+                    <h3>FUN輕鬆</h3>
+                    <p>可以使用金幣遊玩遊戲獲得彩券，彩券是購買實體商品和<br>角色服飾道具的重要資源。</p>
+                </div>
+                <div class="box">
+                    <img src="./image/農場ICON.png" alt="">
+
+                    <h3>FARM牛吃草</h3>
+                    <p>可以使用代幣來種植自己喜歡的咖啡，並有機率直接產出實體咖啡，<br>且每次種植必得相同價值的實體商品。</p>
+                </div>
+            </div>
+
+            <img class="divider" src="./image/真好玩遊樂園2.jpg" style="width: 500px; height: 700;" alt="">
+
+            <div class="box-container">
+                <div class="box">
+                    <img src="./image/樂園商店ICON.png" alt="">
+
+                    <h3>樂園商店</h3>
+                    <p><b>商店分為:代幣商店、彩券商店、服飾商店</b><br><br>
+                        1.<b>代幣商店:</b>可以使用全家點數換取遊戲代幣，<br>代幣可遊玩樂園裡所有設施。<br>
+                        2.<b>彩券商店:</b>可以用彩券購買實體商品。<br>
+                        3.<b>服飾商店:</b>可以使用彩券或代幣購買角色的服裝。</p>
+                </div>
+                <div class="box">
+                    <img src="./image/我的衣櫃ICON.png" alt="">
+
+                    <h3>我的衣櫃</h3>
+                    <p>可以更換角色的服飾、稱號，服飾可以透過玩遊戲獲得、<br>或者在商店裡購買。</p>
+                </div>
+                <div class="box">
+                    <img src="./image/限時活動ICON.png" alt="">
+
+                    <h3>限時活動(如上福袋)</h3>
+                    <p>不定時推出不一樣的限時遊戲，玩家可以直接使用全家點數進行遊玩，<br>並且每次遊玩必得與花費價值相等以上的實體商品。</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!--==================== 功能介紹 結束====================-->
+
+    <!--==================== 底部 開始====================-->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>關於家慶</h4>
+                    <ul>
+                        <li><a href="#">關於我</a></li>
+                        <li><a href="#">經歷</a></li>
+                        <li><a href="#">作品</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>聯絡方式</h4>
+                    <ul>
+                        <li><a href="#">手機:0970701059</a></li>
+                        <li><a href="#">信箱:hkhsh206@gmail.com</a></li>
+                        <li><a href="#">LINE:201561854</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相關教育單位</h4>
+                    <ul>
+                        <li><a href="http://www1.chu.edu.tw/">中華大學</a></li>
+                        <li><a href="https://www.iiiedu.org.tw/taichung/">台中資策會</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>其他社群軟體</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/cainchang.shen/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/chiaching_shen/"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--==================== 底部 結束====================-->
+
+    <!--========== 置頂圖標  使用REMIXICONS ==========-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line scrollup__icon"></i>
+    </a>
+
+    <!--=============== 內容載入動畫效果 scrollreveal ===============-->
+    <script src="./js/scrollreveal.min.js"></script>
+
+    <!--=============== 消除網頁黃色警示 [Deprecation] ===============-->
+    <script>
+        if (!crossOriginIsolated) SharedArrayBuffer = ArrayBuffer;
+    </script>
+
+    <!--=============== 主要 JS ===============-->
+    <script src="./js/main.js"></script>
+
+    <!--=============== 輪播 JS ===============-->
+    <script src="./js/slider.js"></script>
+
+    <!--=============== loading JS ===============-->
+    <script src="./js/loading.js"></script>
+
+
+
+
+</body>
+
+</html>

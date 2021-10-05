@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!--=============== 頁籤圖片 ===============-->
+    <link rel="shortcut icon" href="./image/頁籤.png" type="image/png">
+
+    <!--=============== 連結圖示ICON REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== 連結圖示ICON font-awesome ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!--===============  CSS ===============-->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!--=============== RWD CSS ===============-->
+    <link rel="stylesheet" href="./css/RWD.css">
+
+    <!--=============== loading CSS ===============-->
+    <link rel="stylesheet" href="./css/loading.css">
+
+    <!--=============== JS JQ ===============-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+    <!--=============== 網頁名稱 ===============-->
+    <title>家慶的個人網頁</title>
+
+</head>
+
+<body>
+
+    <div class="loading-wrapper">
+        <div class="loading sk-double-bounce">
+            <div class="sk-child sk-double-bounce1"></div>
+            <div class="sk-child sk-double-bounce2"></div>
+
+        </div>
+    </div>
+
+
+    <!--=============== header 開始 ===============-->
+    <header class="header" id="header">
+        <nav class="nav container">
+
+            <!-- 主頁LOGO連結   -->
+            <a href="#" class="navlogo"> <img class="logoimg" src="./image/logo.png" alt=""> </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">首頁</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">關於我</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#myskills" class="nav__link">技能</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#education" class="nav__link">經驗</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#portfolio" class="nav__link">作品</a>
+                    </li>
+                </ul>
+                <div class="nav__dark">
+                    <!-- Theme change button -->
+                    <span class="change-theme-name">暗色模式</span>
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
+                </div>
+
+                <i class="ri-close-line nav__close" id="nav-close"></i>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-function-line"></i>
+            </div>
+        </nav>
+
+        <div class="scroll-bar"></div>
+    </header>
+    <!--=============== header 結束 ===============-->
+
+
+
+
+
+    <!--==================== HOME ====================-->
+    <section class="home" id="home">
+        <img src="./image/背景.jpg" alt="" class="home__img">
+
+        <div class="home__container container grid">
+            <div class="home__data">
+
+                <h1 class="home__data-title"><b>家慶的</b></h1>
+                <h1 class="home_sec-title"><b>個人網站</b></h1>
+                <a href="./CV.html" class="button">家慶的簡歷</a>
+
+
+            </div>
+
+            <div class="home__social">
+                <a href="https://www.facebook.com/cainchang.shen/" target="_blank" class="home__social-link">
+                    <i class="ri-facebook-box-fill"></i>
+                </a>
+                <a href="https://www.instagram.com/chiaching_shen/" target="_blank" class="home__social-link">
+                    <i class="ri-instagram-fill"></i>
+                </a>
+                <a href="https://twitter.com/" target="_blank" class="home__social-link">
+                    <i class="ri-twitter-fill"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!--==================== ABOUT ====================-->
+    <section class="about" id="about">
+
+        <h1 class="heading">關於我</h1>
+
+        <div class="aboutrow">
+
+            <!-- 個人照 -->
+            <div class="aboutimg">
+
+                <img src="./image/201966-8 澎湖三日_210626_0.jpg" alt="">
+
+            </div>
+
+            <!-- 資本資料 -->
+            <div class="presonal-info">
+
+                <div class="box-container">
+
+                    <div class="box">
+                        <h3> <span> 名字 : </span>沈家慶 </h3>
+                        <h3> <span> 年齡 : </span>24 歲 </h3>
+                        <h3> <span> 信箱 : </span>hkhsh206@gmail.com </h3>
+                        <h3> <span> 電話 : </span>0970701059 </h3>
+                    </div>
+                    <div class="box">
+                        <h3> <span> 畢業 : </span>中華大學資管系</h3>
+                        <h3> <span> 居住 : </span>台南市，台中市 </h3>
+                        <h3> <span> 語言 : </span>中文，台語，英文 </h3>
+                        <h3> <span> 職業 : </span>前端工程師，遊戲企劃員 </h3>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- 工作相關資訊 -->
+        <div class="workinfo">
+
+            <div class="box">
+                <h3>工作經驗</h3>
+                <p>1年</p>
+            </div>
+            <div class="box">
+                <h3>專案</h3>
+                <p>2項</p>
+            </div>
+            <div class="box">
+                <h3>個人作品</h3>
+                <p>3項(持續更新)</p>
+            </div>
+            <div class="box">
+                <h3>希望職位</h3>
+                <p>前端工程師 </p>
+            </div>
+
+        </div>
+
+    </section>
+    <!--==================== ABOUT 結束====================-->
+
+
+
+
+
+    <!--==================== SKILL 開始====================-->
+    <section class="myskills" id="myskills">
+        <header class="heading">我的技能</header>
+        <div class="skills">
+            <div class="set">
+                <span class="far fa-window-maximize"></span>
+                <header>語言</header>
+                <div class="list">
+                    <label>Html</label>
+                    <i class="fab fa-html5"></i>
+                </div>
+                <div class="list">
+                    <label>Css</label>
+                    <i class="fab fa-css3"></i>
+                </div>
+                <div class="list">
+                    <label>js</label>
+                    <i class="fab fa-js"></i>
+                </div>
+                <div class="list">
+                    <label>php</label>
+                    <i class="fab fa-php"></i>
+                </div>
+            </div>
+
+            <div class="set">
+                <span class="fas fa-network-wired"></span>
+                <header>框架</header>
+                <div class="list">
+                    <label>bootstrap</label>
+                    <i class="fab fa-bootstrap"></i>
+                </div>
+                <div class="list">
+                    <label>JQuery</label>
+                    <i class="fab fa-js-square"></i>
+                </div>
+                <div class="list">
+                    <label>React.js</label>
+                    <i class="fab fa-react"></i>
+                </div>
+
+                <div class="list">
+                    <label>node.js</label>
+                    <i class="fab fa-node-js"></i>
+                </div>
+            </div>
+
+
+            <div class="set">
+                <span class="fas fa-tools"></span>
+                <header>其他</header>
+                <div class="list">
+                    <label>MYSQL</label>
+                    <i class="fas fa-database"></i>
+                </div>
+                <div class="list">
+                    <label>Game system planning</label>
+                    <i class="fas fa-book"></i>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!--==================== SKILL 結束====================-->
+
+
+
+
+
+
+
+    <!--==================== 經驗 開始====================-->
+
+
+
+    <section class="experience" id="education">
+
+        <h1 class="heading">教育和經驗 </h1>
+
+        <div class="experiencerow">
+
+            <div class="column">
+
+                <h3 class="title">學習歷程</h3>
+
+                <div class="box">
+                    <div class="year"> <i class="fas fa-calendar"></i> 2021/5~2021/10 </div>
+                    <h3>台中資策會-前端工程師養成班</h3>
+                    <p>參加台中資策會進修前端工程師增進自己，並習得網頁製作技術，累積大量作品。</p>
+                </div>
+                <div class="box">
+                    <div class="year"> <i class="fas fa-calendar"></i> 2015/9~2019/6 </div>
+                    <h3>中華大學資訊管理學系</h3>
+                    <p>於資管系畢業，接觸過大量程式語言和資料庫，如:C++、C#、PYTHON、SQL、ORACLE。 </p>
+                </div>
+
+            </div>
+
+            <div class="column">
+
+                <h3 class="title">工作經驗</h3>
+
+                <div class="box">
+                    <div class="year"> <i class="fas fa-calendar"></i> 2020/7~2021/4 </div>
+                    <h3>真好玩娛樂科技-H5遊戲企劃專員</h3>
+                    <p>擔任與全家合作案的主要企劃，推出全家APP上的真好賺、真好玩遊樂園等休閒遊戲。</p>
+                </div>
+                <div class="box">
+                    <div class="year"> <i class="fas fa-calendar"></i> 2016/7~2018/8 </div>
+                    <h3>德國百靈刮鬍刀工讀銷售員</h3>
+                    <p>連續三年暑假擔任地方賣場銷售專員，達90%以上業績完成率。</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!--==================== 經驗 結束====================-->
+    <!--==================== 作品 開始====================-->
+    <section class="portfolio" id="portfolio">
+
+        <h1 class="heading">精選作品</h1>
+
+        <div class="box-container">
+
+
+            <div class="box" onclick="location.href='./portfolio.html'">
+                <img src="./image/真好玩遊樂園2.jpg" style="width: 150px; height: 300px;" alt="">
+
+                <h3>專案-真好玩遊樂園</h3>
+                <p>與全家合作開發的H5真好玩遊樂園，使用全家消費獲得的點數，可在遊樂園進行遊玩遊戲，角色裝扮，種植作物，限時抽獎，來獲取實體商品。</p>
+                <a href="./portfolio.html" class="button">查看更多</a>
+            </div>
+            </a>
+            <div class="box" onclick="location.href='./portfolioV2.html'">
+                <img src="./image/真好賺主頁.jpg" style="width: 150px; height: 300px;" alt="">
+
+                <h3>專案-真好賺</h3>
+                <p>與全家合作，以全家APP平台為入口，讓使用者在真好賺裡面透過完成相對應任務獲取點數，也可以不用花錢透過每日的小遊戲來獲得點數。</p>
+                <a href="./portfolioV2.html" class="button">查看更多</a>
+            </div>
+            <div class="box" onclick="location.href='./七龍珠對對碰/index.html'">
+                <img src="./image/七龍珠.jpg" style="width: 150px; height: 300px;" alt="">
+
+                <h3>卡牌對對碰</h3>
+                <p>自製遊戲卡牌對對碰，在限時內把相同的卡牌全部找出來，即可過關。<br><br><br></p>
+                <a href="./七龍珠對對碰/index.html" class="button">查看更多</a>
+            </div>
+        </div>
+        <div class="morebutton">
+            <a href="./allportfolio.html" class="button">查看所有作品</a>
+        </div>
+    </section>
+    <!--==================== 作品 結束====================-->
+
+    <!--==================== 底部 開始====================-->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>關於家慶</h4>
+                    <ul>
+                        <li><a href="#about">關於我</a></li>
+                        <li><a href="#education">經歷</a></li>
+                        <li><a href="#portfolio">作品</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>聯絡方式</h4>
+                    <ul>
+                        <li><a href="#">手機:0970701059</a></li>
+                        <li><a href="#">信箱:hkhsh206@gmail.com</a></li>
+                        <li><a href="#">LINE:201561854</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>教育單位</h4>
+                    <ul>
+                        <li><a href="http://www1.chu.edu.tw/">中華大學</a></li>
+                        <li><a href="https://www.iiiedu.org.tw/taichung/">台中資策會</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>社群軟體</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/cainchang.shen/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/channel/UCsaJA4yRg6BFhfCs6LNoIWg/featured"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/chiaching_shen/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/shenchiaching"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--==================== 底部 結束====================-->
+
+
+    <!--========== 置頂圖標  使用REMIXICONS ==========-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line scrollup__icon"></i>
+    </a>
+
+
+    <!--=============== 內容載入動畫效果 scrollreveal ===============-->
+    <script src="./js/scrollreveal.min.js"></script>
+
+    <!--=============== 消除網頁黃色警示 [Deprecation] ===============-->
+    <script>
+        if (!crossOriginIsolated) SharedArrayBuffer = ArrayBuffer;
+    </script>
+
+    <!--=============== 主要 JS ===============-->
+    <script src="./js/main.js"></script>
+
+    <!--=============== loading JS ===============-->
+    <script src="./js/loading.js"></script>
+
+
+
+</body>
+
+</html>
